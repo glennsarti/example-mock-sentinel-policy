@@ -22,9 +22,10 @@ policy "rich-return-types" {
   source = "./policies/rich-return-types/rich-return-types.sentinel"
 }
 
-# Mock the TFPlan so it doesn't matter where this policy is evaluated
-mock "tfplan/v2" {
-  module {
-    source = "./policies/secure-transfer-required-is-enabled/testdata/mock-tfplan-success.sentinel"
-  }
-}
+# Sentinel CLI doesn't mind this. But it seems the 0.18 Sentinel TFC worker doens't like it.
+# # Mock the TFPlan so it doesn't matter where this policy is evaluated
+# mock "tfplan/v2" {
+#   module {
+#     source = "./policies/secure-transfer-required-is-enabled/testdata/mock-tfplan-success.sentinel"
+#   }
+# }
